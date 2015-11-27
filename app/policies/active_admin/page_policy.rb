@@ -1,4 +1,4 @@
-class ActiveAdmin::PagePolicy < ApplicationPolicy
+class ActiveAdmin::PagePolicy < GeneralPolicy
   def show?
     true
   end

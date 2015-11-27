@@ -1,0 +1,2 @@
+class DevicePolicy < GeneralPolicy
+end

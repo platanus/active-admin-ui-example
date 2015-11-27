@@ -11,7 +11,16 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20151127150625) do
+ActiveRecord::Schema.define(version: 20151127165443) do
+
+  create_table "accounts", force: :cascade do |t|
+    t.string   "email",      limit: 255
+    t.string   "password",   limit: 255
+    t.string   "site",       limit: 255
+    t.datetime "expires_at"
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "active_admin_comments", force: :cascade do |t|
     t.string   "namespace",     limit: 255
@@ -45,6 +54,26 @@ ActiveRecord::Schema.define(version: 20151127150625) do
 
   add_index "admin_users", ["email"], name: "index_admin_users_on_email", unique: true, using: :btree
   add_index "admin_users", ["reset_password_token"], name: "index_admin_users_on_reset_password_token", unique: true, using: :btree
+
+  create_table "applications", force: :cascade do |t|
+    t.string   "store",      limit: 255
+    t.string   "name",       limit: 255
+    t.string   "company",    limit: 255
+    t.string   "uid",        limit: 255
+    t.boolean  "active"
+    t.string   "version",    limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
+
+  create_table "devices", force: :cascade do |t|
+    t.string   "name",       limit: 255
+    t.string   "model",      limit: 255
+    t.string   "uid",        limit: 255
+    t.string   "mac",        limit: 255
+    t.datetime "created_at",             null: false
+    t.datetime "updated_at",             null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  limit: 255, default: "", null: false

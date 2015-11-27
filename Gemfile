@@ -29,8 +29,10 @@ group :production do
   gem 'unicorn'
 end
 
-
 group :development, :test do
+  gem 'binding_of_caller'
+  gem 'better_errors'
+  gem 'thin'
   gem 'pry-rails'
   gem 'pry-byebug'
   gem 'rspec-rails'
@@ -38,7 +40,6 @@ group :development, :test do
   gem 'guard-rspec', require: false
   gem 'rspec-nc', require: false
 end
-
 
 group :test do
   gem 'shoulda-matchers', require: false
