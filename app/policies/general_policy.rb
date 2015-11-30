@@ -15,7 +15,7 @@ class GeneralPolicy
   end
 
   def create?
-    false
+    true
   end
 
   def new?
@@ -23,7 +23,7 @@ class GeneralPolicy
   end
 
   def update?
-    false
+    true
   end
 
   def edit?

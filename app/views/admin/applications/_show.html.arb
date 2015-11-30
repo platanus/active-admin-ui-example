@@ -1,0 +1,24 @@
+columns do
+
+  column class: "column small-column" do
+    panel "Store information" do
+      image_tag app.picture.url(:thumb)
+    end
+
+    panel "Basic information" do
+      attributes_table_for app do
+        row :name
+        row :store
+        row :company
+        row :version
+        bool_row :active
+      end
+    end
+  end
+
+  column class: "column big-column" do
+    panel "Historical progress" do
+      render "progress_report"
+    end
+  end
+end

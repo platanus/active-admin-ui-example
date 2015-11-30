@@ -24,6 +24,7 @@ gem 'responders'
 gem 'active_model_serializers', '~> 0.9.3'
 gem 'simple_token_authentication', '~> 1.0'
 gem 'rack-cors', '~> 0.4.0'
+gem 'paperclip'
 
 group :production do
   gem 'unicorn'
